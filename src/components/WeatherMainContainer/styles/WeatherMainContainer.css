@@ -1,9 +1,10 @@
 .WeatherMainContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 60%;
-  background-color: chocolate;
+  padding: 8px 4px;
+  width: 80%;
+  background-color: white;
+}
+.WeatherMainContainer .WeatherCards {
+  width: 100%;
 }/*# sourceMappingURL=WeatherMainContainer.css.map */

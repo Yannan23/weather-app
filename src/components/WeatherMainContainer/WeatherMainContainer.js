@@ -1,7 +1,7 @@
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from '../ForecastWeatherCard/ForecastWeatherCard'
-import './WeatherMainContainer.css'
+import './styles/WeatherMainContainer.css'
 
 function WeatherMainContainer() {
     const apiData = {
@@ -32,7 +32,7 @@ function WeatherMainContainer() {
     return (
         <div className="WeatherMainContainer">
             <TodayWeatherCard data={apiData} />
-            <div>
+            <div className="WeatherCards">
                 <CityWeatherCard cities={cityData} />
                 <ForecastWeatherCard days={dayData} />
             </div>

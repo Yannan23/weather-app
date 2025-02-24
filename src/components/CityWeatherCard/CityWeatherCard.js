@@ -1,4 +1,4 @@
-
+import './styles/CityWeatherCard.css'
 
 function CityWeatherCard(props) {
     const { cities } = props

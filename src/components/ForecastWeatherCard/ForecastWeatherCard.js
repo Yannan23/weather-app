@@ -1,3 +1,4 @@
+import './styles/ForecastWeatherCard.css'
 
 function ForecastWeatherCard(props) {
     const { days } = props
