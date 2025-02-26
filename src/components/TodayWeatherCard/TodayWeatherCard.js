@@ -1,4 +1,4 @@
-import './styles/TodayWeatherCard.css'
+import './TodayWeatherCard.scss'
 
 function TodayWeatherCard(props) {
     const { temp, temp_max, temp_min, huminity, wind } = props.data

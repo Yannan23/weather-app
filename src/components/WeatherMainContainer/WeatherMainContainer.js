@@ -1,7 +1,7 @@
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from '../ForecastWeatherCard/ForecastWeatherCard'
-import './styles/WeatherMainContainer.css'
+import './WeatherMainContainer.scss'
 
 function WeatherMainContainer() {
     const apiData = {

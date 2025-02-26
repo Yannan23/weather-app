@@ -1,4 +1,4 @@
-import './styles/ForecastWeatherCard.css'
+import './ForecastWeatherCard.scss'
 
 function ForecastWeatherCard(props) {
     const { days } = props

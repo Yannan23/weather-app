@@ -1,4 +1,4 @@
-import './styles/main.css';
+import './App.scss';
 import WeatherMainContainer from '../components/WeatherMainContainer/WeatherMainContainer'
 
 function App() {
