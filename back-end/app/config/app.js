@@ -6,5 +6,6 @@ module.exports = {
     port: process.env.PORT,
     api: {
         prefix: process.env.prefix ?? "/api/v1",
-    }
+    },
+    openweatherApikey: process.env.OPENWEATHER_APIKEY,
 }

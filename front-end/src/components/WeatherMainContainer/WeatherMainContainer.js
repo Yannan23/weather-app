@@ -1,9 +1,14 @@
+import { useEffect, useState } from 'react';
+
 import CityWeatherCard from "../CityWeatherCard/CityWeatherCard";
 import TodayWeatherCard from "../TodayWeatherCard/TodayWeatherCard";
 import ForecastWeatherCard from '../ForecastWeatherCard/ForecastWeatherCard'
 import './WeatherMainContainer.scss'
+import { getWeather } from '../../api/backend';
 
 function WeatherMainContainer() {
+    const [data,setData]=useState();
+
     const apiData = {
         city: "Sydney",
         temp: 32,
@@ -11,7 +16,7 @@ function WeatherMainContainer() {
         temp_min: 31,
         huminity: 2,
         wind: 1
-    }
+    };
 
     const cityData = [
         { min: 18, max: 19, city: "sydney" },
@@ -28,7 +33,15 @@ function WeatherMainContainer() {
         { min: 12, max: 18, day: "Fri", huminity: "10" },
         { min: 18, max: 20, day: "Sat", huminity: "30" },
         { min: 5, max: 20, day: "Sun", huminity: "60" },
-    ]
+    ];
+
+    useEffect(()=>{
+        const fetchData = async () => {
+            const result = await getWeather();
+            setData(result.data);
+        };
+        fetchData()
+    },[])
 
     return (
         <div className="WeatherMainContainer">

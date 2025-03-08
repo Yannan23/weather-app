@@ -1,7 +1,7 @@
 const express = require('express');
 const router = new express.Router();
-const articlesController = require('../../controllers/aritclesController')
+const weathersController = require('../../controllers/weathersController')
 
-router.get('/', articlesController.index);
+router.get('/weather', weathersController.index);
 
 module.exports = router;

@@ -1,3 +1,4 @@
+const cors = require('cors')
 const express = require('express');
 const apiRouter = require('../app/routes/v1/api')
 const config = require('../app/config/app')
@@ -17,6 +18,7 @@ const startServer = () => {
 
 module.exports = () => {
     const app = startServer();
+    app.use(cors())
     app.use(config.api.prefix, apiRouter);
     return app;
 }
